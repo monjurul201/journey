@@ -16,6 +16,7 @@
        padding-bottom: 150px;
        
    }
+
    .password {
     background-color: white;
     margin: 0 auto;
@@ -49,3 +50,9 @@ justify-content: space-between;
    width: 100%;
    
  }
+ .booking-form input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
