@@ -1,0 +1,52 @@
+@media only screen and (max-width: 600px) {
+  .sticky-top {
+    position: relative;
+  } 
+  nav ul {
+       flex-direction: column;
+     padding-left: 0rem;
+   }
+   li{
+       padding-bottom: 20px;
+   }
+   .container{
+       max-width:100%;
+       display: flex;
+       flex-direction: column-reverse;
+       padding-left:20px ;
+       padding-bottom: 150px;
+       
+   }
+   .password {
+    background-color: white;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+   
+  }
+  .congratulation{
+    background-color: white;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    text-align: center;
+  }
+  .rules ol li{
+    list-style-type: circle;
+    color: aqua;
+  }
+.f-class{
+display: flex;
+justify-content: space-between;
+}
+ #main-content{
+   width: 100%;
+   
+ }

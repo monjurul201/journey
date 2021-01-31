@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container navigation sticky-top">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+
+    <main class="main-content container" id="main-content">
+        <div class="booking-form" id="booking-area">
+            <h3>আপনার টিকেট বুকিং করতে নিচের ধাপগুলো অনুসরন করুন।</h3>
+            <article>
+                <div class="input-group">
+                    <label for=""> From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for=""> To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                </div>
+            </article>
+            <article>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+            </article>
+            <!--Special class ticket-->
+            <article>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($ <span id="special-totalTicketAmount">150</span> )</label>
+                        <input id="special-Count" class="inp-style inp-width" type="number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="ticketQuantityChange('special',false)" class="btn btn-default  btn-danger"><i
+                                class="fas fa-minus"></i></button>
+                        <button onclick="ticketQuantityChange('special',true)" class="btn btn-default btn-success"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </article>
+            <!--Common class ticket-->
+            <article>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($ <span id="common-totalTicketAmount">100</span> )</label>
+                        <input id="common-Count" class="inp-style inp-width" type="number" value="0">
+                    </div>
+
+                    <div class="plus-minus-btn">
+                        <button onclick="ticketQuantityChange('common', false)" class="btn btn-default btn-danger"><i
+                                class="fas fa-minus"></i></button>
+                        <button onclick="ticketQuantityChange('common', true)" class="btn btn-default btn-success"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <!--Calculation Part-->
+            <article>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="SubTotal-prize">000</span></p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="tax-amount">000</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="grand-total">000</span></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <button id="booking-Process" class="btn-style">Book Now</button>
+        </div>
+
+
+        <article>
+            <div class="booking-content" id="content-title">
+                <h1 class="title" style="color:tomato;">পিকনিক<br>এ যাওয়ার জন্য আপনাকে স্বগতম</h1>
+               <div class="rules">
+                   <ol>
+                       <h3>কারা কারা পিকনিকে অংশগ্রহন করতে পারবে আর কারা কারা অংশগ্রহন করতে পারবে না ।</h3>
+                       <li>প্রেম করে না এমন প্রেমিক, পলাতক প্রেমিক, এমনকি ফোন ধরে না এমন প্রেমিক,প্রেমিকা সবাই যেতে পারবে (অবশ্যই DST Teacher হতে হবে।) <br>
+                         গালফেন্ড বা বয়ফেন্ড কে অংশগ্রহন করাতে পারবেন না । এমনকি স্পটে ফোন দিয়ে নিয়ে আসতে পারবেন না। 
+                       </li>
+                      
+                   </ol>
+                   
+                   <ol>
+                       <h3>পিকনিকে যাওয়ার জন্য কিছু নিয়ম কানুন জেনে নেই।</h3>
+
+                       <li>মোবাইল ফোনে বেশী পুটুর পুটুর করা যাবে না।</li>
+                       <li>কারো কোন কথা ভালো না লাগলে এ নিয়ে তর্কাতর্কি করা যাবে না। <br>বরং এড়িযে চলবেন। </li>
+                       <li>অবশ্যই ইন্টারটেইনমেন্ট এর জন্য কিছু না কিছু করার যোগ্যতা রাখতে হবে।</li>
+                       <li>পিকনিক এর খরচ নিজেকে বহন করতে হবে।</li>
+                   </ol>
+               </div>
+            </div>
+        </article>
+    </main>
+
+    <!--On Handle click section||Payment Conformation section  -->
+    <section>
+        <div class="container" id="confirmation">
+
+            <div class="password" id="password">
+                <h3 class="confirm-title">Complete Payment to confirm ticket booking.</h3>
+                <select name="" id="" class="form-control">
+                    <option value="" selected disabled>Select Your Bank Account </option>
+                    <option value="">Datch Bangla bank</option>
+                    <option value="">bkash</option>
+                </select> <br>
+
+
+                <input type="number" class="form-control" placeholder="Type your Number"><br>
+                <input type="password" class="form-control" placeholder="Type your password">
+                <br>
+                <input type="password" class="form-control" placeholder="Type your 6 digit transaction code"><br>
+
+                <button class="btn btn-outline-success float-end" id="click-Confirm">Click To Confirm </button>
+            </div>
+
+            <div style="text-align: center;" class="congratulation " id="congratulation">
+        
+               <img src="images/green-circle-check-mark-confirmation-tick-marks-vector-21826245.jpg" alt="">
+                <h1 style="color: green;">Congrats!  </h1>
+                <h1 style="color: green;">Payment Successful </h1>
+                <p style="color: green;"> Total Amount: <span id="congratsPrice">0</span></p>
+                <p style="color: green;"> Total Special Ticket: <span id="congratsSpecial">0</span></p>
+                <p style="color: green;"> Total Common Ticket: <span id="congratsCommon">0</span></p>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
