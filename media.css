@@ -51,7 +51,7 @@ justify-content: space-between;
    
  }
  .booking-form input{
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   
